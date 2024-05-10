@@ -6,20 +6,17 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Cat c1 = new Cat();
-        c1.meow();
+        /*
+         *  The equals method in Java is used to determine if two objects are considered equal or not. In the Java programming language, the equals method is defined in the Object class, which is the root class for all classes in Java. By default, the equals method provided by the Object class compares the references (memory addresses) of the two objects. However, in many cases, we want to consider two objects as equal based on their internal state (the values of their instance variables) rather than their memory addresses.
+         */
 
+
+        Cat c1 = new Cat("Tom");
         Cat c2 = new Cat("Tom");
-        c2.meow();
 
-        Cat c3 = new Cat("Tom", 4);
-        c3.meow();
+        System.out.println(c1 == c2);  // memory addresses will be compared --> false
 
-        System.out.println();
-
-        System.out.println(c1);
-        System.out.println(c2);
-        System.out.println(c3);
+        System.out.println(c1.equals(c2));  // internal state will be compared since we override equals method  --> true
 
 
     }

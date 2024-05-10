@@ -1,5 +1,7 @@
 package com.chamika;
 
+import java.util.Objects;
+
 public class Cat {
 
     /*
@@ -69,8 +71,30 @@ public class Cat {
     }
 
     // * overriding the toString method from Object class ==> So that we can get the string representation of an object
+    @Override
     public String toString() {
         return STR."name:- \{this.name}, age:- \{this.age}";
     }
 
+
+    // This can be generated using the IDE 🥹
+    @Override
+    public boolean equals(Object o) {
+        // this --> current obj ,  o --> object which is being compared
+        if (this == o) return true;  // If the two references point to the same object, they are equal
+
+        if (o == null || getClass() != o.getClass())
+            return false;  // If the other object is null or not an instance of the Cat class, they are not equal
+
+        Cat cat = (Cat) o;  // Cast the other object to a Cat instance
+
+        // Compare the values of the instance variables
+        // for comparing primitives == is used & for comparing strings equals method is used 😊
+        return age == cat.age && Objects.equals(name, cat.name) && Objects.equals(color, cat.color);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, age, color);
+    }
 }
