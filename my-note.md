@@ -136,3 +136,34 @@ public static int personCount = 0;  // * since this is a static variable, it bel
     }
 
 ```
+
+### Encapsulation
+
+* Encapsulation is the process of wrapping data (variables) and methods (functions) into a single unit called a class.
+  It is a way to protect the data from being accessed directly by other classes and to provide a controlled way to
+  access the data through getter and setter methods.
+* In Java, encapsulation is implemented using access modifiers (public, private, protected, and default) and
+  getter/setter methods.
+* One of the benefits of encapsulation, as it allows you to control and validate the data before modifying it.
+* By encapsulating the data and providing controlled access through getter and setter methods, we achieve data
+  abstraction and data hiding. This makes the code more maintainable, secure, and flexible, as we can change the
+  internal implementation of the class without affecting the code that uses the class, as long as the public methods (
+  getter and setter methods) remain the same.
+
+#### Inheritance
+
+* Inheritance is a mechanism in Java that allows one class to inherit the properties and behavior of another class. The
+  class that is being inherited from is called the superclass or parent class, and the class that is inheriting from it
+  is called the subclass or child class and inheritance promotes code reusability
+
+#### Super keyword
+
+* The super keyword in Java is used to access members (fields and methods) of the parent class from within the child
+  class. It is also used to invoke the parent class constructor from the child class constructor.
+* There are two main uses of the super keyword:
+
+    1) Accessing parent class members: If the child class has a member with the same name as the parent class, the super
+       keyword can be used to refer to the parent class member explicitly.
+    2) Invoking parent class constructor: The super() statement is used to invoke the parent class constructor from the
+       child class constructor. If you don't explicitly call the parent class constructor using super(), the Java
+       compiler automatically inserts a default super() call (no-argument constructor) in the child class constructor.
