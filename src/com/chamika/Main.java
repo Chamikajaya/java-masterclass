@@ -4,17 +4,18 @@ import java.util.Scanner;
 
 public class Main {
 
+//    static {
+//        System.out.println("Starting the static block of Main class");
+//        System.out.println("End of the static block of Main class");
+//    }
+
     public static void main(String[] args) {
 
-        Cat c1 = new Cat("Tom");
-        Cat c2 = new Cat("Jerry");
+        Person p1 = new Person("John", "Doe", Gender.MALE);
+        System.out.println(STR."Person count: \{Person.personCount}");
 
-        Cat[] cats = {c1, c2};
-
-        Person p1 = new Person("John", "Smith", Gender.MALE, cats);
-
-        System.out.println(p1.toString());
-
+        Person p2 = new Person("Jane", "Doe", Gender.FEMALE);
+        System.out.println(STR."Person count: \{Person.personCount}");
 
     }
 

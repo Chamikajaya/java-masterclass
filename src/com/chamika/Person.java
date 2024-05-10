@@ -4,10 +4,24 @@ import java.util.Arrays;
 import java.util.Objects;
 
 public class Person {
+    public static int personCount = 0;  // * since this is a static variable, it belongs to the class, not to the object
+
+    // static initialization block --> invoked when class is loaded
+    static {
+        System.out.println("Starting the static block of Person class");
+        System.out.println("End of the static block of Person class");
+    }
+
     private String firstName;
     private String lastName;
     private Gender gender;
     private Cat[] cats;
+
+    // instance initialization block - invoked once per instance
+    {
+        System.out.println("instance block of Person class");
+        personCount++;
+    }
 
     public Person(String firstName, String lastName, Gender gender, Cat[] cats) {
         this.firstName = firstName;
@@ -22,6 +36,7 @@ public class Person {
         this.lastName = lastName;
         this.gender = gender;
     }
+
 
     public String getFirstName() {
         return firstName;

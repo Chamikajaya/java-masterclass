@@ -61,3 +61,78 @@
 * Properties must be private.
 * Public getters and setters
 * Must be serializable. -> Implements Serializable
+
+### Static keyword
+
+* Static keyword is used to create variables and methods that belong to the class, rather than to any instance of the
+  class. This can be useful when you want to keep track of a value that is common to all instances of the class.
+* In the following example we have a static variable personCount that keeps track of the number of Person objects that
+  have been created. We increment this variable by 1 each time a new Person object is created. If this variable was not
+  static (i.e., if it was an instance variable), each Person object would have its own copy of the variable, and the
+  count would not be shared between them.
+* **Static Variables**: In Java, when you declare a variable as static within a class (outside of any method), it is
+  shared among all instances of that class. This means that there is only one copy of that variable in memory,
+  regardless of how many objects of the class are created. This can lead to memory savings, especially if you have a
+  large number of objects that need to share the same data. However, it's important to use static variables judiciously,
+  as they can introduce potential threading issues if not handled properly.
+  **Static Methods**: Similar to static variables, static methods in Java belong to the class itself, not to any
+  specific
+  instance of the class. This means that you can call static methods without creating an instance of the class, which
+  can be useful for utility or helper methods that don't require any instance-specific data. **Static methods can only
+  access static variables and other static methods within the same class.**
+
+```
+public static int personCount = 0;  // * since this is a static variable, it belongs to the class, not to the object
+    private String firstName;
+    private String lastName;
+    private Gender gender;
+    private Cat[] cats;
+
+    public Person(String firstName, String lastName, Gender gender, Cat[] cats) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.gender = gender;
+        this.cats = cats;
+        personCount++;  // Increment the personCount by 1
+    }
+
+```
+
+#### Static block initializer
+
+* A static block is a block of code that is executed when the class is loaded into memory. It is used to initialize
+  static variables or perform any other one-time initialization tasks that need to be done before the class is used.
+
+* It's important to note that static initialization happens in a specific order:
+
+1) Static variable initializers and static blocks are executed in the order they appear in the source code, from top to
+   bottom.
+2) If a static block or static variable initializer refers to another static variable or calls a static method, the
+   referred static variable or method must have been initialized or executed already.
+
+```
+// static initialization block  --> --> invoked when class is loaded into memory
+    static { 
+        System.out.println("Starting the static block of Person class");
+        System.out.println("End of the static block of Person class");
+    }
+```
+
+#### Instance block initializer
+
+* An instance initialization block is a block of code that is executed when an instance of the class is created. It is
+  used to initialize instance variables or perform any other initialization tasks that need to be done each time an
+  instance is created.
+
+* An instance initializer block is a block of code that is executed when an instance (object) of a class is created. It
+  is used to perform initialization logic for instance variables of the class. Unlike a constructor, an instance
+  initializer block is not tied to any specific constructor and is **executed before any constructor code runs.**
+
+```
+// instance initialization block - invoked once per instance
+    {
+        System.out.println("instance block of Person class");
+        personCount++;
+    }
+
+```
