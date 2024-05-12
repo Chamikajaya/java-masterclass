@@ -201,3 +201,31 @@ public static int personCount = 0;  // * since this is a static variable, it bel
     * Abstract methods must be implemented by the concrete subclasses that inherit from the abstract class.
     * **If a class contains at least one abstract method, the class itself must be declared as abstract.**
     * An abstract method cannot be declared as private or final.
+
+#### Polymorphism
+
+* It refers to the ability of **an object to take on many forms or behaviors.** In Java, polymorphism is achieved
+  through **method overriding and method overloading.**
+
+* **Method Overloading**: Method overloading is a feature that allows a class to have more than one method with the same
+  name, as long as the method signatures are different. This means that the methods have different parameter lists (
+  number of parameters, type of parameters, or order of parameters). Method overloading is also known as **compile-time
+  polymorphism or static polymorphism** because the method to be called is determined at compile time based on the
+  method
+  signature.
+
+* **Method Overriding**: Method overriding is a feature that allows a subclass to provide a specific implementation of a
+  method that is already provided by its superclass. This means that the subclass can provide its own implementation of
+  the method, which will be used instead of the superclass implementation when the method is called on an object of the
+  subclass. Method overriding is also known as **runtime polymorphism or dynamic polymorphism** because the method to be
+  called is determined at runtime based on the actual type of the object.
+
+#### Interface
+
+* An interface in Java is a reference type that can contain only **abstract methods, default methods, static methods,
+  and
+  constant variables.** It is similar to a class, but it does not have any implementation code. Interfaces are used to
+  define a contract for classes that implement them, specifying the methods that the implementing classes must provide.
+* It provides a way to achieve abstraction and multiple inheritance in Java.
+
+![img_4.png](img_4.png)
