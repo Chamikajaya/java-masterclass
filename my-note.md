@@ -167,3 +167,37 @@ public static int personCount = 0;  // * since this is a static variable, it bel
     2) Invoking parent class constructor: The super() statement is used to invoke the parent class constructor from the
        child class constructor. If you don't explicitly call the parent class constructor using super(), the Java
        compiler automatically inserts a default super() call (no-argument constructor) in the child class constructor.
+
+#### Multilevel Inheritance
+
+![img_2.png](img_2.png)
+
+#### Deadly diamond of death
+
+* The diamond problem is an ambiguity that arises when two classes B and C inherit from A, and class D inherits from
+  both
+  B and C. If there is a method in A that B and C have overridden, and D does not override it, then which version of the
+  method does D inherit: that of B, or that of C?
+* So to avoid this ambiguity, Java does not support multiple inheritance of classes. However, it does support multiple
+  inheritance of interfaces, which do not have the diamond problem because interfaces do not contain any implementation
+  code.
+
+![img_3.png](img_3.png)
+
+#### abstract keyword
+
+* Abstract Classes:
+
+    * An abstract class is declared using the abstract keyword.
+    * An abstract class cannot be instantiated (you cannot create objects of an abstract class).
+    * An abstract class may or may not have abstract methods.
+    * An abstract class can have non-abstract (concrete) methods with method bodies.
+    * Abstract classes are typically used as base classes for creating more specific concrete classes.
+
+* Abstract Methods:
+
+    * An abstract method is declared using the abstract keyword.
+    * An abstract method does not have a method body (no implementation).
+    * Abstract methods must be implemented by the concrete subclasses that inherit from the abstract class.
+    * **If a class contains at least one abstract method, the class itself must be declared as abstract.**
+    * An abstract method cannot be declared as private or final.

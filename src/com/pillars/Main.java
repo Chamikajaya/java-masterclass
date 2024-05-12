@@ -1,13 +1,16 @@
 package com.pillars;
 
-
 public class Main {
     public static void main(String[] args) {
+        Animal cat = new Cat("Whiskers");
+        Animal dog = new Dog("Fido");
 
-        Programmer p1 = new Programmer("John", "Kalutara", 22, new String[]{"Go", "Python", "Java"});
+        cat.speak();
+        dog.speak();
 
-        p1.work();
-
-
+        cat.sleep();
+        dog.sleep();
     }
+
+
 }
