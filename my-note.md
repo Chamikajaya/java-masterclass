@@ -229,3 +229,20 @@ public static int personCount = 0;  // * since this is a static variable, it bel
 * It provides a way to achieve abstraction and multiple inheritance in Java.
 
 ![img_4.png](img_4.png)
+
+#### Dependency Injection
+
+* Dependency injection is a software design pattern that helps in achieving loose coupling between components in an
+  application. **It is a technique where objects (dependencies) are provided to a class from an external source rather
+  than the class creating or instantiating its dependencies itself.**
+* The main goals of dependency injection are:
+
+    1) Inversion of Control (IoC): By injecting dependencies from an external source, the control over the creation and
+       lifecycle of objects is inverted, which means the objects do not control their dependencies, but rather the
+       dependencies are injected into the objects.
+    2) Loose Coupling: Classes are decoupled from their dependencies, making it easier to change, replace, or mock
+       dependencies without modifying the class itself.
+    3) Testability: By injecting dependencies, classes become easier to test in isolation since their dependencies can
+       be replaced with mock or stub objects.
+* Constructor Injection is the most common form of dependency injection, where dependencies are provided to a class
+  through its constructor. Other forms of dependency injection include Setter Injection and Field Injection.
