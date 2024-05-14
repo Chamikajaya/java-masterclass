@@ -1,6 +1,6 @@
 package com.solid;
 
-public class Square {
+public class Square implements IShape {
     private int width;
 
 
@@ -14,5 +14,10 @@ public class Square {
 
     public void setWidth(int width) {
         this.width = width;
+    }
+
+    @Override
+    public double getArea() {
+        return Math.PI * Math.pow(getWidth(), 2);
     }
 }

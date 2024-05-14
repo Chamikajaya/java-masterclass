@@ -253,3 +253,12 @@ public static int personCount = 0;  // * since this is a static variable, it bel
 single responsibility or job. If a class has more than one responsibility, it becomes harder to understand, modify, and
 maintain.
 
+2)**Open/Closed Principle** ==> A class should be open for extension but closed for modification. This means that a
+class should be designed in such a way that it can be extended to add new functionality without modifying its existing
+code. This can be achieved by using inheritance, interfaces, and design patterns like the Strategy pattern.
+
+3)**Liskov Substitution Principle** ==> Subtypes must be substitutable for their base types. This means that if you have
+a base class and a derived class, you should be able to use objects of the derived class wherever objects of the base
+class are expected, without breaking the functionality of the program.
+
+4)

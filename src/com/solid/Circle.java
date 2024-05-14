@@ -1,6 +1,6 @@
 package com.solid;
 
-public class Circle {
+public class Circle implements IShape {
 
     private int radius;
 
@@ -15,5 +15,10 @@ public class Circle {
 
     public void setRadius(int radius) {
         this.radius = radius;
+    }
+
+    @Override
+    public double getArea() {
+        return Math.PI * Math.pow(getRadius(), 2);
     }
 }
