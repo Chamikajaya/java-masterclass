@@ -246,3 +246,10 @@ public static int personCount = 0;  // * since this is a static variable, it bel
        be replaced with mock or stub objects.
 * Constructor Injection is the most common form of dependency injection, where dependencies are provided to a class
   through its constructor. Other forms of dependency injection include Setter Injection and Field Injection.
+
+#### SOLID Principles
+
+1)**Single Responsibility** ==> A class should have only one reason to change. In other words, a class should have a
+single responsibility or job. If a class has more than one responsibility, it becomes harder to understand, modify, and
+maintain.
+

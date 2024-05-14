@@ -11,4 +11,11 @@ public class CarService {
         this.emailService = emailService;
         this.motService = motService;
     }
+
+//    ! This is bad because it makes CarService tightly coupled with CarDAO - CarService creates its dependencies by itself :(
+    /*
+    public CarService() {
+        carDAO = new CarDAO();
+    }
+     */
 }

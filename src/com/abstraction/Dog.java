@@ -1,4 +1,4 @@
-package com.pillars;
+package com.abstraction;
 
 public class Dog extends Animal {
 

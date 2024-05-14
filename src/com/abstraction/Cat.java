@@ -1,4 +1,4 @@
-package com.pillars;
+package com.abstraction;
 
 public class Cat extends Animal {
     public Cat(String name) {
