@@ -5,6 +5,7 @@ import java.util.Objects;
 
 public class TotalAreaCalculator {
 
+
     public double getTotalArea(List<Object> shapes) {
         double totalArea = 0;
         for (int i = 0; i < shapes.size(); i++) {
@@ -19,5 +20,12 @@ public class TotalAreaCalculator {
         }
         return totalArea;
     }
+
+    // * Now this AreaCalc class not only calculates the area, but also it is involved in printing the output in different formats. What if we want to get the total in multiple formats such as JSON, csv ,.... ? We will be violating the Single Responsibility. So instead we can create a new class for that purpose. ==>
+
+//
+//    public String getTotalInJSON(List<Object> shapes) {
+//        return STR."{total \{getTotalArea(shapes)} }";
+//    }
 
 }
