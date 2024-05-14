@@ -262,4 +262,8 @@ a base class and a derived class, you should be able to use objects of the deriv
 class are expected, without breaking the functionality of the program.(**In other words, if a code is expecting an
 instance of a superclass, it should be able to work with any instance of a subclass without any issues.**)
 
-4)
+4)**Interface Segregation** ==> It states that clients should not be forced to depend on interfaces they do not use. In
+other words, larger interfaces should be split into smaller, more specific interfaces that are tailored to the needs of
+individual clients.
+
+5) 
