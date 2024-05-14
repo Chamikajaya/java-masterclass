@@ -10,8 +10,9 @@ public class Main {
         Circle circle = new Circle(10);
         Square square = new Square(10);
         Triangle triangle = new Triangle(10, 10);
+        InvalidShape invalidShape = new InvalidShape();
 
-        List<Object> myShapes = List.of(circle, square, triangle);
+        List<Object> myShapes = List.of(circle, square, triangle, invalidShape);
 
         double total = totalAreaCalculator.getTotalArea(myShapes);
 

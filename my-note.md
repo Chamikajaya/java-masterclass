@@ -259,6 +259,7 @@ code. This can be achieved by using inheritance, interfaces, and design patterns
 
 3)**Liskov Substitution Principle** ==> Subtypes must be substitutable for their base types. This means that if you have
 a base class and a derived class, you should be able to use objects of the derived class wherever objects of the base
-class are expected, without breaking the functionality of the program.
+class are expected, without breaking the functionality of the program.(**In other words, if a code is expecting an
+instance of a superclass, it should be able to work with any instance of a subclass without any issues.**)
 
 4)
