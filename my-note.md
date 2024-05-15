@@ -249,24 +249,62 @@ public static int personCount = 0;  // * since this is a static variable, it bel
 
 #### SOLID Principles
 
-1)**Single Responsibility** ==> A class should have only one reason to change. In other words, a class should have a
-single responsibility or job. If a class has more than one responsibility, it becomes harder to understand, modify, and
-maintain.
+1) **Single Responsibility** ==> A class should have only one reason to change. In other words, a class should have a
+   single responsibility or job. If a class has more than one responsibility, it becomes harder to understand, modify,
+   and
+   maintain.
 
-2)**Open/Closed Principle** ==> A class should be open for extension but closed for modification. This means that a
-class should be designed in such a way that it can be extended to add new functionality without modifying its existing
-code. This can be achieved by using inheritance, interfaces, and design patterns like the Strategy pattern.
+2) **Open/Closed Principle** ==> A class should be open for extension but closed for modification. This means that a
+   class should be designed in such a way that it can be extended to add new functionality without modifying its
+   existing
+   code. This can be achieved by using inheritance, interfaces, and design patterns like the Strategy pattern.
 
-3)**Liskov Substitution Principle** ==> Subtypes must be substitutable for their base types. This means that if you have
-a base class and a derived class, you should be able to use objects of the derived class wherever objects of the base
-class are expected, without breaking the functionality of the program.(**In other words, if a code is expecting an
-instance of a superclass, it should be able to work with any instance of a subclass without any issues.**)
+3) **Liskov Substitution Principle** ==> Subtypes must be substitutable for their base types. This means that if you
+   have
+   a base class and a derived class, you should be able to use objects of the derived class wherever objects of the base
+   class are expected, without breaking the functionality of the program.(**In other words, if a code is expecting an
+   instance of a superclass, it should be able to work with any instance of a subclass without any issues.**)
 
-4)**Interface Segregation** ==> It states that clients should not be forced to depend on interfaces they do not use. In
-other words, larger interfaces should be split into smaller, more specific interfaces that are tailored to the needs of
-individual clients.
+4) **Interface Segregation** ==> It states that clients should not be forced to depend on interfaces they do not use. In
+   other words, larger interfaces should be split into smaller, more specific interfaces that are tailored to the needs
+   of
+   individual clients.
 
 5) **Dependency Inversion** ==> High-level modules should not depend on low-level modules. Both should depend on
    abstractions. Abstractions should not depend on details. Details should depend on abstractions. (**Components should
    depend on abstractions, not on concretions**) While the DIP is a principle that guides us towards better software
    design, Dependency Injection is a pattern that helps us implement and follow the DIP in practice.
+
+#### Null Pointer Exception & Using Optional class to handle it -->
+
+* A null pointer exception occurs when you try to access or manipulate an object reference that is null. In Java, null
+  is a reserved keyword that represents a non-existent object. When you try to call a method or access a property of a
+  null object reference, the Java Virtual Machine (JVM) throws a NullPointerException. We can try traditional null
+  checks like if/else , try/catch blocks to handle null pointer exception but it is not a good practice to use them as
+  they make the code more complex and harder to read. Instead, we can use the Optional class introduced in Java 8 to
+  handle null values more effectively.
+
+* The Optional class is a container object that may or may not contain a non-null value. It is used to represent an
+  optional value that may or may not be present. The Optional class provides methods to work with values that may be
+  null, such as checking if a value is present, getting the value if it is present, or providing a default value if the
+  value is not present.
+
+    ```
+  
+    String myStr = null;
+        Optional<String> myOptional = Optional.ofNullable(myStr);  // Optional.ofNullable() method is used to create an Optional object with a given value, which can be null.
+
+        /*
+        if (myOptional.isPresent()) {
+
+            System.out.println(myOptional.get().length());
+
+        } else {
+            System.out.println("String is null");
+        }
+        */
+
+        // * Using a lambda expression 😊
+        myOptional.ifPresentOrElse(value -> System.out.println(value.length()), () -> System.out.println("String is null"));
+  
+    ```
