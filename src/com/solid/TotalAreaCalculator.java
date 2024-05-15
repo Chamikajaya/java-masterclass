@@ -3,9 +3,9 @@ package com.solid;
 import java.util.List;
 import java.util.Objects;
 
-public class TotalAreaCalculator {
+public class TotalAreaCalculator implements ITotalAreaCalculator {
 
-
+    @Override
     public double getTotalArea(List<Object> shapes) {
         double totalArea = 0;
         for (int i = 0; i < shapes.size(); i++) {

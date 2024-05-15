@@ -266,4 +266,7 @@ instance of a superclass, it should be able to work with any instance of a subcl
 other words, larger interfaces should be split into smaller, more specific interfaces that are tailored to the needs of
 individual clients.
 
-5) 
+5) **Dependency Inversion** ==> High-level modules should not depend on low-level modules. Both should depend on
+   abstractions. Abstractions should not depend on details. Details should depend on abstractions. (**Components should
+   depend on abstractions, not on concretions**) While the DIP is a principle that guides us towards better software
+   design, Dependency Injection is a pattern that helps us implement and follow the DIP in practice.
