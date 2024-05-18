@@ -313,10 +313,11 @@ public static int personCount = 0;  // * since this is a static variable, it bel
 
 ![img_5.png](img_5.png)
 
-### Generics -->
+### Generics --> (Also refer the code in the Generics package 😊)
 
 * Generics enable types (classes and interfaces) to be parameters when defining classes, interfaces, and methods. This
   allows for code reusability and type safety.
+* We can not use primitive types as type arguments in generics. We can only use reference types.
 
 **Benefits of Generics**
 
@@ -327,3 +328,73 @@ public static int personCount = 0;  // * since this is a static variable, it bel
    appropriate type, which reduces boilerplate code and the risk of ClassCastException.
 3) Code Reusability: Generics enable you to write more reusable and generic code. For example, you can write a single
    class or method that can operate on different types of objects.
+
+**Generic Classes**
+
+```
+
+
+// * Box<T> is a generic class. T is a type parameter that will be replaced by a concrete type when an object of type Box is created.
+public class Box<T> {  // T is the type parameter
+
+    private T t;
+
+    public void set(T t) {
+        this.t = t;
+    }
+
+    public T get() {
+        return t;
+    }
+
+}
+
+```
+
+**Generic Methods**
+
+```
+// * A simple Generic method
+    public static <T> void printArr(T[] arr) {  // * need to declare the type parameter before the return type
+        for (T item : arr) {
+            System.out.print(STR."\{item} -> ");
+        }
+        System.out.println();
+    }
+```
+
+**Upper Bounded Wildcards**
+
+* An upper bounded wildcard restricts the unknown type to be a specific type or a subtype of that type. It is
+  represented using the extends keyword followed by the upper bound type. **Syntax: <? extends UpperBoundType>**
+
+```
+  //    * Upper Bounded Wildcards  -->
+//    In the below example, the printList method takes a list of elements that are instances of Number or any subclass of Number (such as Integer, Double, etc.).
+    public static void printList(List<? extends Number> list) {
+        for (Number n : list) {
+            System.out.print(STR."\{n} -> ");
+        }
+        System.out.println();
+    }
+
+```
+
+**Lower Bounded Wildcards**
+
+* A lower bounded wildcard restricts the unknown type to be a specific type or a supertype of that type. It is
+  represented using the super keyword followed by the lower bound type. **Syntax: <? super LowerBoundType>**
+
+```
+//    * Lower Bounded Wildcards  -->
+
+    // In this example, the addElements method takes a list of elements that are instances of Integer or any superclass of Integer (such as Number or Object). This allows the method to add Integer instances to lists of different object types, as long as those types are supertypes of Integer.
+    
+    public static void addElements(List<? super Integer> list) {
+        for (int i = 1; i <= 5; i++) {
+            list.add(i);
+        }
+    }
+
+```
+  
