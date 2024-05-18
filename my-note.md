@@ -308,3 +308,22 @@ public static int personCount = 0;  // * since this is a static variable, it bel
         myOptional.ifPresentOrElse(value -> System.out.println(value.length()), () -> System.out.println("String is null"));
   
     ```
+
+### Data Structures -->
+
+![img_5.png](img_5.png)
+
+### Generics -->
+
+* Generics enable types (classes and interfaces) to be parameters when defining classes, interfaces, and methods. This
+  allows for code reusability and type safety.
+
+**Benefits of Generics**
+
+1) Type Safety: **Generics allow you to catch type errors at compile time rather than at runtime**. For instance, if you
+   try
+   to add a String to a Box<Integer>, the compiler will generate an error.
+2) Elimination of Casts: When you retrieve elements from a generic collection, you don’t need to cast them to the
+   appropriate type, which reduces boilerplate code and the risk of ClassCastException.
+3) Code Reusability: Generics enable you to write more reusable and generic code. For example, you can write a single
+   class or method that can operate on different types of objects.

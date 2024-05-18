@@ -4,6 +4,7 @@ import java.util.Optional;
 
 public class Main {
 
+
     public static void main(String[] args) {
         String myStr = null;
         Optional<String> myOptional = Optional.ofNullable(myStr);  // Optional.ofNullable() method is used to create an Optional object with a given value, which can be null.
