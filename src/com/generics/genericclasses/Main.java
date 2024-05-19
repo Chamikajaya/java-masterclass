@@ -34,15 +34,17 @@ public class Main {
 //        printList(doubleList);
 
 
-        List<Object> objList = new ArrayList<>();
-        List<Number> numList = new ArrayList<>();
-        numList.add(5.67);
-        numList.add(6.78);
-        addElements(numList);
-        System.out.println(numList);
+//        List<Object> objList = new ArrayList<>();
+//        List<Number> numList = new ArrayList<>();
+//        numList.add(5.67);
+//        numList.add(6.78);
+//        addElements(numList);
+//        System.out.println(numList);
+//
+//        addElements(objList);
+//        System.out.println(objList);
 
-        addElements(objList);
-        System.out.println(objList);
+
     }
 
     // * A simple Generic method -->

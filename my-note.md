@@ -397,4 +397,37 @@ public class Box<T> {  // T is the type parameter
     }
 
 ```
+
+### Streams API --> (Also refer the code in the Streams package 😊)
+
+* A stream is a sequence of elements that supports various operations to perform computations on those elements. These
+  operations can be:
+
+1) Intermediate (like filtering or mapping)
+2) Terminal (like collecting or reducing)
+
+* Key Features of Streams
+
+* Declarative: You specify what you want to achieve, not how to achieve it.
+* Pipelining: Operations can be chained to form a pipeline.
+* Automatic Iteration: Streams handle iteration internally, you don't need explicit loops.
+* Functional: Operations on streams can be performed using lambda expressions or method references.
+
+**Intermediate Operations**
+
+* These return a new stream and are lazy, meaning they don’t do any processing until a terminal operation is invoked.
+  Examples include:
+
+* filter(Predicate<T> predicate): Selects elements that match the given predicate.
+* map(Function<T, R> mapper): Transforms each element using the provided function.
+* sorted(Comparator<T> comparator): Sorts the elements according to the given comparator.
+
+**Terminal Operations**
+
+* These produce a result or a side-effect and terminate the stream pipeline. Examples include:
+
+* forEach(Consumer<T> action): Performs an action for each element.
+* collect(Collector<T, A, R> collector): Converts the stream into a different form, like a list or a set.
+* reduce(BinaryOperator<T> accumulator): Combines elements into a single result using an associative accumulation
+  function.
   
