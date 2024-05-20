@@ -430,4 +430,41 @@ public class Box<T> {  // T is the type parameter
 * collect(Collector<T, A, R> collector): Converts the stream into a different form, like a list or a set.
 * reduce(BinaryOperator<T> accumulator): Combines elements into a single result using an associative accumulation
   function.
-  
+
+### Build Tools -->
+
+* A build tool is a software application that automates the process of building and packaging an application from its
+  source code. It manages the various tasks involved in the build process, such as compiling source code, running tests,
+  packaging the application, and deploying it to a server or repository.
+
+**Maven**
+![img_6.png](img_6.png)
+
+### Record ==>
+
+* In Java 16 (released in March 2021), a new language feature called "Records" was introduced. Records are a compact
+  syntax for defining immutable data carrier classes. They aim to provide a more concise and convenient way of creating
+  classes that hold data without requiring boilerplate code for constructors, getters, equals, hashCode, and toString
+  methods.
+
+```
+    record Person(String name, int age){}
+
+```
+
+* This single line of code defines a new class called Person with two fields (name and age), a constructor with
+  parameters for those fields, and implementations of the following methods:
+
+* public String name() (getter for name)
+* public int age() (getter for age)
+* public Person(String name, int age) (canonical constructor)
+* equals() and hashCode() (based on the record's components)
+* toString() (providing a string representation of the record's components)
+
+### n-tier Architecture ==>
+
+![img.png](img7.png)
+
+### Spring Boot ==>
+
+![img_1.png](img_8.png)
